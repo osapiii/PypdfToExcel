@@ -125,6 +125,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-LOGIN_URL = '/login'
+
+LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/pdfmr/top'
-LOGOUT_REDIRECT_URL = '/login'
+LOGOUT_REDIRECT_URL = '/accounts/login'

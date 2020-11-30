@@ -4,5 +4,5 @@ from . import views
 app_name = 'pdfmr'
 
 urlpatterns = [
-    path('top',views.top, name='top')
+    path('top',views.TopView.as_view(), name='top')
 ]

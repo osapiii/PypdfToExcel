@@ -58,15 +58,27 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-        <!-- ================ ここから以下を追加 ================ -->
+        <!-- Control Sidebar Toggle Button -->
+        
+        <!--========== ここから以下を追加 =========== -->
+        {% if user.is_authenticated %}
+        <!--========== ここまでを追加 =============== -->
+        
         <li>
-            <a class="nav-link">ユーザ名：</a>
+            
+            <!--========== ここから以下を修正 =============== -->
+            <a class="nav-link">ユーザ名：{{ user.get_username }}</a>
+            <!--========== ここまでを修正 =============== -->
+        
         </li>     
         <li>
-            <a class="nav-link" href="">
-            <i class="fa fa-fw fa-sign-out"></i>ログアウト</a>
+            <a class="nav-link" href="{% url 'accounts:logout' %}">
+                <i class="fa fa-fw fa-sign-out"></i>ログアウト</a>
         </li>
-        <!-- ================ ここまでを追加 ================ -->
+        
+        <!--========== ここから以下を追加 =========== -->
+        {% endif %}
+        <!--========== ここまでを追加 =============== -->
         </ul>
       </div>
     </nav>
