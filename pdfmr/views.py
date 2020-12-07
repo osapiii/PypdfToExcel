@@ -27,7 +27,7 @@ class UploadView(LoginRequiredMixin, generic.FormView):
             os.makedirs(user_dir)
         temp_dir = form.save()
         # pdf -> PDF->Excel変換処理の実装
-        # shutil.rmtree(temp_dir)
+        shutil.rmtree(temp_dir)
         _, file_list = default_storage.listdir(user_dir)
         message = "正常終了しました。"
         context = {

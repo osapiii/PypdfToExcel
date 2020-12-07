@@ -3,3 +3,5 @@ djangorestframework==3.10.3
 psycopg2
 bootstrap4
 django-widgets-improved
+pdfminer.six
+openpyxl
